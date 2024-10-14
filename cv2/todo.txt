@@ -1,0 +1,35 @@
+Třída Item
+	Atributy:
+		volume (objem): soukromý, celočíselný
+		weight (hmotnost): soukromý, celočíselný
+	Konstruktor:
+		Parametrický, nastavuje hodnoty volume a weight. Hodnoty po nastavení nelze měnit.
+	Metody:
+		Gettery pro volume a weight (vytvořit pomocí Alt + Insert v IDE).
+Třída Backpack
+	Atributy:
+		volume (objem): soukromý, celočíselný, nastavený přes konstruktor, hodnota neměnná
+		loadCapacity (nosnost): soukromý, celočíselný, nastavený přes konstruktor, hodnota neměnná
+		remainingVolume: soukromý, celočíselný, nastavuje se na hodnotu volume při inicializaci
+		remainingLoadCapacity: soukromý, celočíselný, nastavuje se na hodnotu loadCapacity při inicializaci
+Konstruktor:
+	Parametrický, nastavuje hodnoty volume a loadCapacity.
+	Metody:
+		Gettery pro všechny atributy (vytvořit pomocí Alt + Insert v IDE).
+		putItem(Item item): Veřejná metoda, která zkontroluje, zda se předmět vejde do batohu co do objemu a hmotnosti. Pokud ano, sníží remainingVolume a remainingLoadCapacity a vrátí true. Pokud ne, vrátí false.
+Třída Rectangle
+	Atributy:
+		a, b: soukromé, celočíselné (strany obdélníka)
+		instanceCount: soukromý, statický, celočíselný, počáteční hodnota 0
+	Konstruktory:
+		Bez parametrů: nastaví a = 3, b = 5
+		Jeden parametr: nastaví obě strany na stejnou hodnotu (čtverec)
+		Dva parametry: nastaví a a b podle parametrů, obě hodnoty musí být kladné
+		Každé zavolání konstruktoru zvýší instanceCount o 1
+	Metody:
+		getArea(): Vrátí obsah obdélníka
+		getPerimeter(): Vrátí obvod obdélníka
+		getInstanceCount(): Statická metoda, vrátí hodnotu instanceCount
+Testování metod tříd Backpack a Rectangle
+Využijte JUnit k testování všech metod kromě getterů a setterů.
+Zahrňte testy pro kontrolu správné funkčnosti metod putItem v Backpack a metod getArea, getPerimeter a kontrolu počtu instancí v Rectangle.
