@@ -1,0 +1,54 @@
+Úkol 1: Třída Employee
+Atributy:
+name (typ String): soukromá proměnná
+surname (typ String): soukromá proměnná
+jobDescription (typ String): soukromá proměnná
+Konstruktor:
+
+Parametrický konstruktor pro nastavení name, surname, a jobDescription.
+Metody:
+
+Gettery pro každou proměnnou.
+toString(): překrytí metody pro výpis ve formátu "Jsem [name] [surname], [jobDescription]."
+
+
+Úkol 2: Třída TeamLeader (dědí z Employee)
+Atributy:
+numOfTeamMembers (typ int): uchovává počet členů týmu
+teamMembers (pole typu Employee): pole pro ukládání členů týmu
+
+
+Úkol 3: Konstruktor třídy TeamLeader
+Konstruktor:
+Parametry: name, surname, maxNumOfTeamMembers
+Volá konstruktor třídy Employee s jobDescription "já to tady řídím"
+Inicializuje pole teamMembers na délku maxNumOfTeamMembers
+Nastaví numOfTeamMembers na 0
+
+
+Úkol 4: Metoda addTeamMember
+Metoda addTeamMember:
+Přidá Employee do teamMembers pokud je místo
+Zvýší numOfTeamMembers
+Vrátí true pokud byl člen přidán, false pokud bylo pole plné
+
+
+Úkol 5: Statická metoda getNewTeamLeader
+Statická metoda:
+Parametry: name, surname, maxNumOfTeamMembersStr
+Převede maxNumOfTeamMembersStr na integer
+Vytvoří a vrátí novou instanci TeamLeader
+
+
+Úkol 6: Překrytí getJobDescription v TeamLeader
+Metoda getJobDescription:
+Vrátí řetězec sestavený z:
+Volání getJobDescription() z Employee
+"Vedu tyto lidi:"
+Výpisy toString() pro každého Employee v teamMembers
+
+
+Úkol 7: Třída TeamLeader2 (kompozice místo dědění)
+Třída TeamLeader2:
+Obsahuje instanci Employee
+Stejné chování jako TeamLeader, ale bez dědění – místo toho používá kompozici (obsahuje Employee jako součást)
